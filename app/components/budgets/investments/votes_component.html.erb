@@ -28,7 +28,7 @@
             method: "post",
             remote: !display_support_alert?,
             data:   ({ confirm: confirm_vote_message } if display_support_alert?),
-            disabled: !current_user,
+            disabled: !current_user || reason.present?,
             "aria-label": support_aria_label %>
       <% end %>
     <% end %>
