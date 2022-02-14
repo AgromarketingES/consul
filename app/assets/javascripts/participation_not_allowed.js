@@ -11,7 +11,7 @@
 
         if (not_allowed.length > 0) {
           event.preventDefault();
-          not_allowed.show().focus();
+          not_allowed.addClass("shown").focus();
 
           if (votes === "div.votes") {
             $(".in-favor, .against", $(event.target).closest(votes)).remove();

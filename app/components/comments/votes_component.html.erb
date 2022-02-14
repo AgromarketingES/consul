@@ -25,10 +25,6 @@
   </span>
 
   <% unless current_user %>
-    <div tabindex="0">
-      <div class="participation-not-allowed" style="display:none" aria-hidden="false">
-        <%= sanitize(t("votes.comment_unauthenticated", signin: link_to_signin, signup: link_to_signup)) %>
-      </div>
-    </div>
+    <%= render Shared::ParticipationNotAllowedComponent.new(comment) %>
   <% end %>
 </div>
